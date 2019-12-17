@@ -1,0 +1,17 @@
+{
+  "name": "fake-api",
+  "version": "1.0.0",
+  "description": "fake-api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Andre",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1"
+  }
+}
