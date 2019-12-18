@@ -12,15 +12,13 @@ app.get('/', (req, res) => {
 
 // MOVIES //
 app.get('/movies', (req, res) => {
-    if (req.query.orderBy == undefined || req.query.orderBy === '') {
-        req.query.orderBy = 'ORDER BY movieName'
-    } else {
-        req.query.orderBy = 'ORDER BY ' + req.query.orderBy
-    }
+    req.query.orderBy = 'ORDER BY ' + req.query.orderBy
+    console.log(req.query)
 
     let sql = `SELECT id, movieName, poster, synopsis, year(releaseDate) as year
                FROM m_movies
                ${req.query.orderBy}
+               ${req.query.orderDir}
                LIMIT ${req.query.limit}
                OFFSET ${req.query.offset}`
 

@@ -6,6 +6,12 @@ const conn = mysql.createConnection({
     password: 'T6C5dbOAXG',
     database: 'GKIdGIS9IU',
     timezone: 'UTC'
+
+    // host: 'localhost',
+    // user: 'root',
+    // password: '',
+    // database: 'tonton',
+    // timezone: 'UTC'
 })
 
 module.exports = {
