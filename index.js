@@ -90,7 +90,7 @@ app.get('/movieArtists', (req,res) => {
 })
 
 app.get('/moviesByArtist', (req, res) => {
-    let sql = `SELECT cm.idMov, movieName, poster, synopsis, year(releaseDate) as year, castName
+    let sql = `SELECT cm.idMov as id, movieName, poster, synopsis, year(releaseDate) as year, castName
                FROM m_cast m
                JOIN con_moviecast cm ON m.id = cm.idCast
                JOIN m_movies mv ON mv.id = cm.idMov
