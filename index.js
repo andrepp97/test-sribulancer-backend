@@ -75,6 +75,17 @@ app.get('/movieGenres', (req,res) => {
 
 
 // ARTIST //
+app.get('/allArtist', (req,res) => {
+    let sql = `SELECT id, castName, image FROM m_cast`
+
+    sqlDB.query(sql, (err, results) => {
+        if (err) {
+            return res.status(500).send(err)
+        }
+        res.status(200).send(results)
+    })
+})
+
 app.get('/movieArtists', (req,res) => {
     let sql = `SELECT m.id, castName
                FROM m_cast m
